@@ -12,7 +12,7 @@ task is safe for untrained volunteers (nine gates, G1–G9 — see
 | `packages/tier0` | The Tier-0 task standard and classifier — the core IP |
 | `apps/api` | Express API (`GET /healthz`, `POST /v1/classify`) |
 | `apps/api/migrations` | Raw SQL schema (Postgres 15+, PostGIS, pgcrypto) |
-| `apps/api/api/` + `apps/api/vercel.json` | Vercel serverless entry wrapping the Express app |
+| `api/` + `vercel.json` | Vercel serverless entry wrapping the Express app |
 | `docs/` | Architecture, standard, equity and liability posture |
 
 ## Getting started
@@ -55,12 +55,12 @@ them itself.
 
 ## Deployment (Vercel)
 
-The Vercel project's **Root Directory is `apps/api`** (the repo is cloned
-whole, so the npm workspace still resolves). `apps/api/vercel.json` routes
-every path to `apps/api/api/index.ts`, which exports the Express app;
-`npm install` builds tier0 via its prepare script and `npm run build`
-compiles the API. After deploying, add the environment variables above in
-the Vercel dashboard and redeploy to unlock the full API.
+The repo root is the Vercel project root (Framework Preset: Other,
+Root Directory empty). `vercel.json` routes every path to `api/index.ts`,
+which exports the Express app; `npm install` builds tier0 via its prepare
+script and `npm run build` compiles both workspaces. After deploying, add
+the environment variables above in the Vercel dashboard and redeploy to
+unlock the full API.
 
 Platform notes:
 - Request bodies are capped at 4 MB (Vercel's limit); larger photo payloads
