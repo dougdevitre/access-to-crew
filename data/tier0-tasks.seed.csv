@@ -1,0 +1,16 @@
+task_id,name,category,kit_profile,crew_min,crew_max,minutes,season,need_source,tier0_notes
+T01,Alley debris sweep,cleanup,alley_sweep,6,12,90,year-round,CSB Debris-Alley/Street,No mattresses/appliances/tires — route to bulk_pickup
+T02,Vacant lot litter pull,cleanup,lot_litter,6,15,90,Mar-Nov,CSB Debris-Vacant Lot,Ground-level only; no entry into structures
+T03,Sidewalk edge clearing,access,greening,4,10,90,Apr-Oct,CSB Weeds/High Grass,Hand tools only; restores walkability past overgrown lots
+T04,Storm drain clearing,water,alley_sweep,4,8,60,Sep-Nov & Mar,Leaf season,Surface debris only — never lift grates or enter
+T05,Post-tornado glass & brick sweep,recovery,glass_rubble,8,16,90,year-round,Academy/Ville volunteer efforts,Public right-of-way only; no structures. Beachhead task
+T06,Church/school grounds reset,grounds,greening,6,12,90,Mar-Nov,Host request,Ground-level; host names the done-state
+T07,Park bed weeding & mulch spread,greening,greening,6,14,90,Apr-Jun & Sep,Parks/Brightside,Hand-pull only; no chemicals
+T08,Trail tread & greenway brushing,trails,greening,6,12,90,Mar-Nov,Great Rivers Greenway,Hand loppers only; no chainsaws; no overhead cutting
+T09,Senior sidewalk snow clear,neighbor,snow,4,8,60,Dec-Feb,Neighborhood assoc referral,Daylight only; sidewalk and steps, never roofs
+T10,Senior leaf & yard clear,neighbor,greening,4,8,90,Oct-Nov,Neighborhood assoc referral,Ground-level; no ladders, no gutters
+T11,Food bank sort & pack,indoor,indoor,8,20,90,year-round,STL Area Foodbank,Indoor — bad-weather fallback. Keep one running every slot
+T12,Donation drive sort,indoor,indoor,6,15,90,year-round,Hub sites,Indoor fallback; good for teen and 55+ crews
+T13,Community garden bed prep,greening,greening,6,12,90,Mar-May,Brightside demo garden model,Hand tools; no tillers
+T14,Block planter install,greening,greening,6,12,90,Apr-May,Brightside Blitz Blooms,Container planting only
+T15,Bus stop & transit pad cleanup,transit,alley_sweep,4,10,60,year-round,CSB Debris-Alley/Street,Stay off roadway; sidewalk side only
