@@ -1,7 +1,8 @@
 {
+  "framework": null,
   "installCommand": "npm install",
   "buildCommand": "npm run build",
-  "framework": null,
+  "outputDirectory": "public",
   "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }],
   "functions": {
     "api/index.ts": {

@@ -55,11 +55,12 @@ them itself.
 
 ## Deployment (Vercel)
 
-The repo root is the Vercel project root. `vercel.json` routes every path to
-`api/index.ts`, which exports the Express app; `npm install` builds tier0
-and `npm run build` compiles both workspaces. After deploying, add the
-environment variables above in the Vercel dashboard and redeploy to unlock
-the full API.
+The repo root is the Vercel project root (Framework Preset: Other,
+Root Directory empty). `vercel.json` routes every path to `api/index.ts`,
+which exports the Express app; `npm install` builds tier0 via its prepare
+script and `npm run build` compiles both workspaces. After deploying, add
+the environment variables above in the Vercel dashboard and redeploy to
+unlock the full API.
 
 Platform notes:
 - Request bodies are capped at 4 MB (Vercel's limit); larger photo payloads
