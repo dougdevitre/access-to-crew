@@ -7,11 +7,13 @@
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "migrate": "tsx scripts/migrate.ts"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.30.1",
-    "@blockcrew/tier0": "workspace:*",
+    "@anthropic-ai/sdk": "^0.116.0",
+    "@blockcrew/tier0": "*",
+    "@clerk/backend": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "express-rate-limit": "^7.4.1",
