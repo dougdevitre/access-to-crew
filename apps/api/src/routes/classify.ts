@@ -8,6 +8,7 @@ import {
   TIER0_MODEL,
 } from '@blockcrew/tier0';
 import { getPool, insertClassification } from '../db.js';
+import { disclaimerSummary } from '../disclaimer.js';
 import type { AppConfig } from '../env.js';
 import { requireAuth } from '../middleware/auth.js';
 import { requireService } from '../middleware/config.js';
@@ -44,7 +45,12 @@ export function classifyRouter(config: AppConfig, client: Anthropic | null): Rou
           }
         }
 
-        res.json({ classification: result, autoPublishable: canAutoPublish(result), persisted });
+        res.json({
+          classification: result,
+          autoPublishable: canAutoPublish(result),
+          persisted,
+          disclaimer: disclaimerSummary,
+        });
       } catch (err) {
         if (err instanceof ClassifierOutputError) {
           return next(new HttpError(502, 'Classifier unavailable or produced invalid output'));

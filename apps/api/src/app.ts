@@ -3,10 +3,12 @@ import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import { disclaimerLink } from './disclaimer.js';
 import { loadConfig } from './env.js';
 import { errorHandler } from './middleware/error.js';
 import { healthRouter } from './routes/health.js';
 import { classifyRouter } from './routes/classify.js';
+import { disclaimerRouter } from './routes/disclaimer.js';
 
 export const config = loadConfig();
 
@@ -19,6 +21,7 @@ app.disable('x-powered-by');
 // limiter keys on real client IPs, not the proxy's.
 app.set('trust proxy', 1);
 app.use(helmet());
+app.use(disclaimerLink);
 app.use(cors({ origin: config.corsOrigin, credentials: true }));
 // Photos arrive base64. Vercel caps request bodies at ~4.5 MB regardless;
 // larger payloads await the S3 presigned-upload path.
@@ -26,6 +29,7 @@ app.use(express.json({ limit: '4mb' }));
 app.use(rateLimit({ windowMs: 60_000, limit: 60, standardHeaders: true, legacyHeaders: false }));
 
 app.use(healthRouter(config));
+app.use('/v1', disclaimerRouter());
 app.use('/v1', classifyRouter(config, anthropic));
 
 app.use(errorHandler);

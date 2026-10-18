@@ -12,7 +12,7 @@ task is safe for untrained volunteers (nine gates, G1–G9 — see
 | Path | What it is |
 |---|---|
 | `packages/tier0` | The Tier-0 task standard and classifier — the core IP |
-| `apps/api` | Express API (`GET /healthz`, `POST /v1/classify`) |
+| `apps/api` | Express API (`GET /healthz`, `GET /v1/disclaimer`, `POST /v1/classify`) |
 | `apps/api/migrations` | Raw SQL schema (Postgres 15+, PostGIS, pgcrypto) |
 | `api/` + `vercel.json` | Vercel serverless entry wrapping the Express app |
 | `docs/` | Architecture, standard, equity and liability posture |
@@ -24,7 +24,7 @@ Requires Node 22 and npm.
 ```sh
 npm install        # also builds packages/tier0 via its prepare script
 npm run typecheck
-npm test           # 13 tier0 tests
+npm test           # tier0 and api tests
 npm run dev -w @blockcrew/api   # http://localhost:8080
 ```
 
