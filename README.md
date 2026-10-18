@@ -1,5 +1,10 @@
 # Block Crew
 
+<!-- BEGIN DISCLAIMER: synced from dougdevitre/access-to, edit it there -->
+> [!IMPORTANT]
+> **Educational information only.** Block Crew is not legal, medical, mental health, financial or safety advice, and using it creates no professional relationship. **In danger now? Call 911. For crisis support, call or text 988.** Confirm anything important with the official source or a licensed professional. Read the full [disclaimer](DISCLAIMER.md).
+<!-- END DISCLAIMER -->
+
 A St. Louis civic volunteering backend. Resident 311 complaints become
 candidate cleanup sessions, and an AI **Tier-0 classifier** gates whether a
 task is safe for untrained volunteers (nine gates, G1–G9 — see
