@@ -5,3 +5,7 @@
 # there is nothing to fetch. (Also passed as --exclude in the workflow.)
 ^tel:
 ^mailto:
+
+# dougdevitre.org is down: the Access To hub's CNAME was deleted on 2026-04-07.
+# Temporary — remove when the domain is reattached.
+^https?://(www\.)?dougdevitre\.org
