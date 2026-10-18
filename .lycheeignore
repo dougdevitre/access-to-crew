@@ -1,0 +1,7 @@
+# Exclusions for the Link check workflow (.github/workflows/link-check.yml).
+# One regular expression per line. Every entry says why it is skipped.
+
+# tel: and mailto: are phone numbers and email addresses, not web pages, so
+# there is nothing to fetch. (Also passed as --exclude in the workflow.)
+^tel:
+^mailto:
