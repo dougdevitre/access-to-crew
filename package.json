@@ -1,6 +1,7 @@
 {
   "name": "blockcrew",
   "private": true,
+  "type": "module",
   "version": "0.1.0",
   "workspaces": ["packages/*", "apps/*"],
   "scripts": {

@@ -14,7 +14,7 @@ task is safe for untrained volunteers (nine gates, G1–G9 — see
 >
 > Maintained by **Doug Devitre, Community Development Catalyst** · [dougdevitre.org](https://dougdevitre.org)
 
-**Live site:** https://crew.dougdevitre.org
+**Live API:** `crew.dougdevitre.org` (API only, no web page at `/`; status check at [`/healthz`](https://crew.dougdevitre.org/healthz))
 
 ## Layout
 
