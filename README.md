@@ -10,7 +10,7 @@ candidate cleanup sessions, and an AI **Tier-0 classifier** gates whether a
 task is safe for untrained volunteers (nine gates, G1–G9 — see
 [docs/tier0-standard.md](docs/tier0-standard.md)).
 
-> Part of **[Access To](https://dougdevitre.org)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.org/#pillars)
+> Part of **[Access To](https://dougdevitre.org)** — open-source tools for the access gaps that matter most. [See all projects →](https://dougdevitre.org/about.html#pillars)
 >
 > Maintained by **Doug Devitre, Community Development Catalyst** · [dougdevitre.org](https://dougdevitre.org)
 
